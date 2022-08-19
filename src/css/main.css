@@ -63,15 +63,20 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  /*support for IE11*/
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
 }
 
 @media (max-width: 768px){
   .reports{
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: 1fr 1vw 1fr;
   }
 }
 @media(max-width: 480px){
   .reports{
     grid-template-columns: repeat(1, 1fr);
+    -ms-grid-columns: 1fr 1vw;
   }
 }
